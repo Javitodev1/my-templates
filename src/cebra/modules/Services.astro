@@ -1,3 +1,7 @@
+---
+import { LinkCard } from '@cebra/components'
+---
+
 <section class='max-w-screen-xl px-10 mx-auto'>
   <div class='text-center py-14'>
     <p
@@ -25,31 +29,47 @@
     </div>
   </div>
 
-  <div class='grid grid-cols-3 pt-10 pb-32 gap-y-8 gap-x-16'>
-    <a href='#'>
-      <div
-        class='w-full h-[520px] bg-black relative group overflow-hidden flex flex-col justify-end p-10'>
-        <picture>
-          <img
-            src='/assets/cebra/Home_Social_Media.png'
-            alt='home social media image'
-            class='absolute top-0 left-0 object-cover object-center duration-1000 size-full opacity-70 group-hover:scale-125 group-hover:opacity-0'
-          />
-        </picture>
-        <h3 class='relative text-3xl font-extrabold text-white'>
-          Social<br />Media
-        </h3>
+  <div class='grid grid-cols-3 pt-10 pb-32 gap-y-8 gap-x-12'>
+    <LinkCard src={'/assets/cebra/Home_Social_Media.png'}>
+      <Fragment slot={'header'}>Social<br />Media</Fragment>
+      <Fragment slot={'body'}
+        >¡Impulsa el <br> marketing de <br> tus redes <br> sociales!</Fragment
+      >
+    </LinkCard>
 
-        <p class='relative invisible mt-2 text-lg font-semibold text-white duration-100 group-hover:visible group-hover:duration-500'>
-          ¡Impulsa el marketing de tus redes sociales!
-        </p>
-      </div>
-    </a>
+    <LinkCard src={'/assets/cebra/Home_Posicionamiento_SEO.png'}>
+      <Fragment slot={'header'}>Posicionamineto<br />orgánico <br>seo</Fragment>
+      <Fragment slot={'body'}
+        >¡Impulsa el marketing de tus redes sociales!</Fragment
+      >
+    </LinkCard>
 
-    <div class='w-full h-[520px] bg-black'></div>
-    <div class='w-full h-[520px] bg-black'></div>
-    <div class='w-full h-[520px] bg-black'></div>
-    <div class='w-full h-[520px] bg-black'></div>
-    <div class='w-full h-[520px] bg-black'></div>
+    <LinkCard src={'/assets/cebra/Home_Paid_Media_02.png'}>
+      <Fragment slot={'header'}>Paid<br />Media</Fragment>
+      <Fragment slot={'body'}
+        >¡Impulsa el marketing de tus redes sociales!</Fragment
+      >
+    </LinkCard>
+
+    <LinkCard src={'/assets/cebra/Home_Marketing_de_Contenidos.png'}>
+      <Fragment slot={'header'}>marketing<br />de contenidos</Fragment>
+      <Fragment slot={'body'}
+        >¡Impulsa el marketing de tus redes sociales!</Fragment
+      >
+    </LinkCard>
+
+    <LinkCard src={'/assets/cebra/Home_HubSpot.png'}>
+      <Fragment slot={'header'}>implementación<br />hubspot</Fragment>
+      <Fragment slot={'body'}
+        >¡Impulsa el marketing de tus redes sociales!</Fragment
+      >
+    </LinkCard>
+
+    <LinkCard src={'/assets/cebra/Home_Desarrollo_Web.png'}>
+      <Fragment slot={'header'}>Desarrollo<br />Web</Fragment>
+      <Fragment slot={'body'}
+        >¡Impulsa el marketing de tus redes sociales!</Fragment
+      >
+    </LinkCard>
   </div>
 </section>
