@@ -1,0 +1,82 @@
+---
+import type { HTMLTag } from 'astro/types'
+
+enum VariantKeys {
+  banner,
+  title,
+  subtitle,
+  spaced,
+  cta,
+  'body-accent',
+  body,
+  'big-number',
+}
+
+type Variant = keyof typeof VariantKeys
+
+interface VariantObj {
+  as: HTMLTag
+  css: string
+}
+
+const Variants: Record<Variant, VariantObj> = {
+  'banner': {
+    as: 'h1',
+    css: 'text-5xl font-bold uppercase',
+  },
+  'title': {
+    as: 'h2',
+    css: 'text-5xl font-bold uppercase leading-tight',
+  },
+  'subtitle': {
+    as: 'h3',
+    css: 'text-xl font-extrabold uppercase',
+  },
+  'spaced': {
+    as: 'p',
+    css: 'text-xs font-normal tracking-[0.17rem] leading-loose uppercase',
+  },
+  'cta': {
+    as: 'p',
+    css: 'text-sm font-bold uppercase',
+  },
+  'body': {
+    as: 'p',
+    css: 'text-lg font-light leading-loose',
+  },
+  'body-accent': {
+    as: 'p',
+    css: 'text-lg font-semibold',
+  },
+  'big-number': {
+    as: 'p',
+    css: 'text-8xl font-extrabold',
+  },
+}
+
+const Colors = {
+  none: '',
+  white: 'text-white',
+  black: 'text-black',
+  yellow: 'text-cebra-accent-1',
+  sky: 'text-cebra-accent-2',
+}
+
+type Color = keyof typeof Colors
+
+interface Props {
+  variant: Variant
+  color: Color
+}
+
+const { variant, color, ...props } = Astro.props
+const { as: Tag, css } = Variants[variant]
+
+const classes = [css, Colors[color]]
+---
+
+<Tag
+  class:list={classes}
+  {...props}
+  ><slot /></Tag
+>
