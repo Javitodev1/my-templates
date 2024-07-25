@@ -1,0 +1,29 @@
+---
+const Variants = {
+  solid: 'font-bold',
+  underline: 'bg-gradient-to-t from-25% to-0% to-transparent',
+}
+
+type Variant = keyof typeof Variants
+
+const Colors = {
+  yellow: { text: 'text-cebra-accent-1', bg: 'from-cebra-accent-1' },
+  sky: { text: 'text-cebra-accent-2', bg: 'from-cebra-accent-2' },
+}
+
+type Color = keyof typeof Colors
+
+interface Props {
+  variant: Variant
+  color: Color
+}
+
+const { color, variant } = Astro.props
+const { text, bg } = Colors[color]
+
+const classes = [variant === 'solid' ? text : bg, Variants[variant]]
+---
+
+<strong class:list={classes}>
+  <slot />
+</strong>
