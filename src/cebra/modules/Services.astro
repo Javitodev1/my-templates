@@ -1,31 +1,37 @@
 ---
-import { LinkCard } from '@cebra/components'
+import { LinkCard, BrandText, Accent } from '@cebra/components'
 ---
 
 <section class='max-w-screen-xl px-10 mx-auto'>
   <div class='text-center py-14'>
-    <p
-      class='text-xs font-normal tracking-[0.17rem] leading-loose text-sky-500 uppercase'>
-      TE AYUDAMOS A CRECER
-    </p>
+    <BrandText
+      variant={'spaced'}
+      color={'sky'}
+      >TE AYUDAMOS A CRECER</BrandText
+    >
 
-    <h2 class='mt-6 text-5xl font-bold text-black uppercase'>
-      ¿QUÉ
-      <span class='relative mb-1'>
-        <span class='relative z-10'>SOLUCIONES</span>
-        <div class='absolute left-0 w-full h-3 bg-yellow-400 bottom-1'></div>
-      </span>
-      OFRECEMOS?
-    </h2>
+    <BrandText
+      variant={'title'}
+      color={'black'}
+      >¿QUÉ <Accent
+        variant={'underline'}
+        color={'yellow'}
+        >SOLUCIONES</Accent
+      >OFRECEMOS?</BrandText
+    >
 
     <div class='mt-8'>
-      <p class='text-lg font-semibold'>
-        ¡Somos los mejores y queremos que tú también lo seas!
-      </p>
-      <p class='text-lg'>
-        La manada Cebra se enfoca en entregar soluciones personalizadas y
-        resultados de calidad.
-      </p>
+      <BrandText
+        variant={'body-accent'}
+        color={'black'}
+        >¡Somos los mejores y queremos que tú también lo seas!</BrandText
+      >
+      <BrandText
+        variant={'body'}
+        color={'black'}
+        >La manada Cebra se enfoca en entregar soluciones personalizadas y
+        resultados de calidad.</BrandText
+      >
     </div>
   </div>
 
@@ -33,12 +39,14 @@ import { LinkCard } from '@cebra/components'
     <LinkCard src={'/assets/cebra/Home_Social_Media.png'}>
       <Fragment slot={'header'}>Social<br />Media</Fragment>
       <Fragment slot={'body'}
-        >¡Impulsa el <br> marketing de <br> tus redes <br> sociales!</Fragment
+        >¡Impulsa el <br /> marketing de <br /> tus redes <br /> sociales!</Fragment
       >
     </LinkCard>
 
     <LinkCard src={'/assets/cebra/Home_Posicionamiento_SEO.png'}>
-      <Fragment slot={'header'}>Posicionamineto<br />orgánico <br>seo</Fragment>
+      <Fragment slot={'header'}
+        >Posicionamineto<br />orgánico <br />seo</Fragment
+      >
       <Fragment slot={'body'}
         >¡Impulsa el marketing de tus redes sociales!</Fragment
       >
