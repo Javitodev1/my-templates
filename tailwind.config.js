@@ -2,8 +2,14 @@
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        cebra: {
+          'accent-1': '#FFCC00',
+          'accent-2': '#0092FF',
+        },
+      },
+    },
   },
   plugins: [],
 }
-
