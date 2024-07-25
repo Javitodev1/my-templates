@@ -1,0 +1,47 @@
+---
+import { BrandText, Accent } from '@cebra/components'
+
+const src = '/assets/cebra/Home_01.png'
+---
+
+<section
+  class='py-20 bg-black bg-center bg-no-repeat bg-cover'
+  style={`background-image: url(${src});`}>
+  <div class='max-w-screen-xl px-10 mx-auto'>
+    <div class='grid grid-cols-5 place-items-center'>
+      <div class='col-span-3'>
+        <BrandText
+          variant={'title'}
+          color={'white'}
+          >TRABAJAMOS
+          <Accent
+            variant={'underline'}
+            color={'yellow'}
+            >PLANES
+          </Accent> DE MARKETING QUE TE
+          <br />
+          <Accent
+            variant={'underline'}
+            color={'sky'}
+            >HARÁN CRECER
+          </Accent>
+        </BrandText>
+      </div>
+
+      <div class='col-span-2 space-y-8'>
+        <BrandText
+          variant={'body'}
+          color={'white'}
+          >¿Sabías que las rayas de las cebras son únicas? <br /> ¡Nuestros clientes
+          también lo son!</BrandText
+        >
+        <BrandText
+          variant={'body'}
+          color={'white'}
+          >Porque ninguna empresa es igual a otra, construimos experiencias
+          personalizadas a las necesidades de cada marca.</BrandText
+        >
+      </div>
+    </div>
+  </div>
+</section>
