@@ -1,0 +1,21 @@
+---
+import { BrandText } from '@cebra/components'
+---
+
+<article class='space-y-3'>
+  <BrandText
+    variant={'big-number'}
+    color={'sky'}
+    ><slot name='number' /></BrandText
+  >
+  <BrandText
+    variant={'subtitle'}
+    color={'black'}
+    ><slot name='header' /></BrandText
+  >
+  <BrandText
+    variant={'body'}
+    color={'black'}
+    ><slot name='body' /></BrandText
+  >
+</article>
