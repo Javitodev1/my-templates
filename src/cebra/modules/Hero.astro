@@ -1,3 +1,7 @@
+---
+import { BrandText, Accent, LinkButton } from '@cebra/components'
+---
+
 <section class='relative w-full bg-center bg-no-repeat bg-cover'>
   <!-- Header -->
   <header class='absolute top-0 left-0 flex justify-between w-full py-5 px-14'>
@@ -19,32 +23,30 @@
   <!-- Hero -->
   <div class='grid max-w-screen-xl grid-cols-3 gap-4 px-10 mx-auto py-60'>
     <div class='col-span-2'>
-      <h1
-        class='text-xs font-normal tracking-[0.17rem] leading-loose text-white uppercase'>
-        SOCIAL MEDIA | PAID MEDIA | SEO | DESARROLLO WEB | MARKETING DE
-        CONTENIDOS | HUBSPOT CRM
-      </h1>
+      <BrandText
+        variant={'spaced'}
+        color={'white'}
+        >SOCIAL MEDIA | PAID MEDIA | SEO | DESARROLLO WEB | MARKETING DE
+        CONTENIDOS | HUBSPOT CRM</BrandText
+      >
 
-      <h2 class='text-5xl font-bold text-white uppercase'>
-        MÁS QUE UNA
-        <strong class='mr-0 font-bold text-yellow-400'
-          >AGENCIA DE MARKETING DIGITAL</strong
+      <BrandText
+        variant={'banner'}
+        color={'white'}
+        >MÁS QUE UNA
+        <Accent
+          variant={'solid'}
+          color={'yellow'}
+          >AGENCIA DE MARKETING DIGITAL</Accent
         >, SOMOS TU
-        <span class='relative mb-1'>
-          <span class='relative z-10'>SOCIO</span>
-          <div class='absolute left-0 w-full h-3 bottom-1 bg-sky-500'></div>
-        </span>
-        <span class='relative mb-1'>
-          <span class='relative z-10'>ESTRATÉGICO</span>
-          <div class='absolute left-0 w-full h-3 bottom-1 bg-sky-500'></div>
-        </span>
-      </h2>
+        <Accent
+          variant={'underline'}
+          color={'sky'}
+          >SOCIO ESTRATÉGICO</Accent
+        >
+      </BrandText>
 
-      <a
-        href='#'
-        class='block px-10 py-4 mt-10 text-sm font-bold text-black uppercase bg-yellow-400 rounded-full w-fit'
-        >CONÓCENOS
-      </a>
+      <LinkButton class='mt-8'>CONÓCENOS</LinkButton>
     </div>
   </div>
 </section>
