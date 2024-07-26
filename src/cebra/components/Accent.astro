@@ -1,7 +1,7 @@
 ---
 const Variants = {
-  solid: 'font-bold',
-  underline: 'bg-gradient-to-t from-25% to-0% to-transparent',
+  solid: '',
+  underline: 'relative bg-gradient-to-t from-20% to-20% to-transparent',
 }
 
 type Variant = keyof typeof Variants
@@ -27,3 +27,9 @@ const classes = [variant === 'solid' ? text : bg, Variants[variant]]
 <strong class:list={classes}>
   <slot />
 </strong>
+
+<style>
+  strong {
+    background-size: 100px 1.2em;
+  }
+</style>
