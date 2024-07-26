@@ -1,0 +1,28 @@
+---
+import { BrandText } from '@cebra/components'
+---
+
+<article class="flex-shrink-0 px-8 py-8 bg-white shadow-lg shadow-black/20 w-80">
+  <div class='mb-4'><slot name='logo' /></div>
+
+  <div class='mb-16'>
+    <BrandText
+      variant={'body-card'}
+      color={'black-secondary'}
+      ><slot name='body' /></BrandText
+    >
+  </div>
+
+  <div>
+    <BrandText
+      variant={'body-accent'}
+      color={'black'}
+      ><slot name='author' /></BrandText
+    >
+    <BrandText
+      variant={'body-card'}
+      color={'black'}
+      ><slot name='role' /></BrandText
+    >
+  </div>
+</article>
