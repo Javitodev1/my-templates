@@ -1,9 +1,58 @@
 ---
 import * as Modules from './modules'
+import { LinkCard } from './components'
 ---
 
 <Modules.Hero />
-<Modules.Services />
+
+<Modules.Services>
+  <Fragment slot={'cards'}>
+    <LinkCard src={'/assets/cebra/Home_Social_Media.png'}>
+      <Fragment slot={'header'}>Social<br />Media</Fragment>
+      <Fragment slot={'body'}
+        >¡Impulsa el marketing de tus redes sociales!</Fragment
+      >
+    </LinkCard>
+
+    <LinkCard src={'/assets/cebra/Home_Posicionamiento_SEO.png'}>
+      <Fragment slot={'header'}
+        >Posicionamiento<br />orgánico <br />seo</Fragment
+      >
+      <Fragment slot={'body'}
+        >¡Impulsa el marketing de tus redes sociales!</Fragment
+      >
+    </LinkCard>
+
+    <LinkCard src={'/assets/cebra/Home_Paid_Media_02.png'}>
+      <Fragment slot={'header'}>Paid<br />Media</Fragment>
+      <Fragment slot={'body'}
+        >¡Impulsa el marketing de tus redes sociales!</Fragment
+      >
+    </LinkCard>
+
+    <LinkCard src={'/assets/cebra/Home_Marketing_de_Contenidos.png'}>
+      <Fragment slot={'header'}>marketing<br />de contenidos</Fragment>
+      <Fragment slot={'body'}
+        >¡Impulsa el marketing de tus redes sociales!</Fragment
+      >
+    </LinkCard>
+
+    <LinkCard src={'/assets/cebra/Home_HubSpot.png'}>
+      <Fragment slot={'header'}>implementación<br />hubspot</Fragment>
+      <Fragment slot={'body'}
+        >¡Impulsa el marketing de tus redes sociales!</Fragment
+      >
+    </LinkCard>
+
+    <LinkCard src={'/assets/cebra/Home_Desarrollo_Web.png'}>
+      <Fragment slot={'header'}>Desarrollo<br />Web</Fragment>
+      <Fragment slot={'body'}
+        >¡Impulsa el marketing de tus redes sociales!</Fragment
+      >
+    </LinkCard>
+  </Fragment>
+</Modules.Services>
+
 <Modules.BannerContact />
 <Modules.BannerCebras />
 <Modules.OurMethod />
