@@ -1,11 +1,50 @@
 ---
 import * as Modules from './modules'
-import { LinkCard } from './components'
+import { Accent, LinkCard, MethodCard, TestimonyCard } from './components'
 ---
 
-<Modules.Hero />
+<!-- Hero Section -->
+<Modules.Hero>
+  <Fragment slot={'before-header'}>
+    social media | paid media | seo | desarrollo web | marketing de contenidos |
+    hubspot crm
+  </Fragment>
+  <Fragment slot={'header'}>
+    más que una
+    <Accent
+      variant={'solid'}
+      color={'yellow'}
+      >agencia de marketing digital
+    </Accent>
+    <span class='-ml-2'>, somos tu</span>
+    <Accent
+      variant={'underline'}
+      color={'sky'}>
+      socio estratégico
+    </Accent>
+  </Fragment>
+  <Fragment slot={'cta'}> conócenos </Fragment>
+</Modules.Hero>
 
+<!-- Services Section -->
 <Modules.Services>
+  <Fragment slot={'before-header'}>te ayudamos a crecer</Fragment>
+  <Fragment slot={'header'}
+    >¿qué
+    <Accent
+      variant={'underline'}
+      color={'yellow'}
+      >soluciones</Accent
+    >ofrecemos?</Fragment
+  >
+  <Fragment slot={'after-header'}>
+    <Accent variant={'bold'}
+      >¡Somos los mejores y queremos que tú también lo seas!</Accent
+    >
+    <br />
+    La manada Cebra se enfoca en entregar soluciones personalizadas y resultados
+    de calidad.
+  </Fragment>
   <Fragment slot={'cards'}>
     <LinkCard src={'/assets/cebra/Home_Social_Media.png'}>
       <Fragment slot={'header'}>Social<br />Media</Fragment>
@@ -15,9 +54,7 @@ import { LinkCard } from './components'
     </LinkCard>
 
     <LinkCard src={'/assets/cebra/Home_Posicionamiento_SEO.png'}>
-      <Fragment slot={'header'}
-        >Posicionamiento<br />orgánico <br />seo</Fragment
-      >
+      <Fragment slot={'header'}>Posicionamiento orgánico <br /> seo</Fragment>
       <Fragment slot={'body'}
         >¡Impulsa el marketing de tus redes sociales!</Fragment
       >
@@ -53,7 +90,154 @@ import { LinkCard } from './components'
   </Fragment>
 </Modules.Services>
 
-<Modules.BannerContact />
-<Modules.BannerCebras />
-<Modules.OurMethod />
-<Modules.Testimonies />
+<!-- Banner Contact Section -->
+<Modules.BannerContact>
+  <Fragment slot={'header'}>
+    NOS ESFORZAMOS EN DARLE UN <Accent
+      variant={'underline'}
+      color={'sky'}
+      >TOQUE ÚNICO</Accent
+    > A CADA UNO DE NUESTROS SOCIOS
+  </Fragment>
+  <Fragment slot={'cta'}> contáctanos </Fragment>
+</Modules.BannerContact>
+
+<!-- Banner Cebras Section -->
+<Modules.BannerCebras>
+  <Fragment slot={'header'}>
+    trabajamos
+    <Accent
+      variant={'underline'}
+      color={'yellow'}
+      >planes
+    </Accent> de marketing que te
+    <br />
+    <Accent
+      variant={'underline'}
+      color={'sky'}
+      >harán crecer
+    </Accent>
+  </Fragment>
+
+  <Fragment slot={'body-1'}>
+    ¿Sabías que las rayas de las cebras son únicas?
+    <br />
+    ¡Nuestros clientes también lo son!
+  </Fragment>
+
+  <Fragment slot={'body-2'}>
+    Porque ninguna empresa es igual a otra, construimos experiencias
+    personalizadas a las necesidades de cada marca.
+  </Fragment>
+</Modules.BannerCebras>
+
+<!-- Our Method Section -->
+<Modules.OurMethod>
+  <Fragment slot={'cta'}>conócenos</Fragment>
+  <Fragment slot={'cards'}>
+    <MethodCard>
+      <Fragment slot={'number'}>01.</Fragment>
+      <Fragment slot={'header'}>¿CÓMO SE ENCUENTRA TU MARCA?</Fragment>
+      <Fragment slot={'body'}
+        >Analizamos el estatus actual de tu negocio y la forma de pensar de tu
+        mercado. Estudiamos el contexto de tu marca para encontrar oportunidades
+        y definir tus necesidades.</Fragment
+      >
+    </MethodCard>
+
+    <MethodCard>
+      <Fragment slot={'number'}>02.</Fragment>
+      <Fragment slot={'header'}>¿QUÉ OBJETIVOS BUSCAS?</Fragment>
+      <Fragment slot={'body'}
+        >Definimos las metas de tu negocio en su entorno digital y desarrollamos
+        tácticas en distintos canales para apoyar estos objetivos.
+      </Fragment>
+    </MethodCard>
+
+    <MethodCard>
+      <Fragment slot={'number'}>03.</Fragment>
+      <Fragment slot={'header'}>¿QUÉ OPORTUNIDADES EXISTEN?</Fragment>
+      <Fragment slot={'body'}
+        >Detectamos los puntos claves de tu negocio para brindarte soluciones
+        personalizadas. Desarrollamos operaciones efectivas para generar una
+        audiencia de calidad.
+      </Fragment>
+    </MethodCard>
+
+    <MethodCard>
+      <Fragment slot={'number'}>04.</Fragment>
+      <Fragment slot={'header'}>¿CÓMO TE AYUDAMOS A MEJORAR? </Fragment>
+      <Fragment slot={'body'}
+        >Las conversiones y resultados están siempre acompañadas de un análisis
+        constante. Te entregamos informes detallados para implementar mejoras
+        continuas.</Fragment
+      >
+    </MethodCard>
+  </Fragment>
+</Modules.OurMethod>
+
+<Modules.Testimonies>
+  <Fragment slot={'before-header'}>testimonios</Fragment>
+  <Fragment slot={'header'}
+    >CLIENTES QUE <Accent
+      variant={'underline'}
+      color={'sky'}
+      >CONFÍAN</Accent
+    >
+    <br />
+    EN <Accent
+      variant={'underline'}
+      color={'yellow'}
+      >AGENCIA CEBRA</Accent
+    >
+  </Fragment>
+  <Fragment slot={'cards'}>
+    <TestimonyCard>
+      <Fragment slot={'body'}
+        >Cebra hace un seguimiento constante a nuestros pedidos, entregando
+        informes completos y accediendo responsablemente a nuestros
+        requerimientos. Con ellos, nos sentimos seguros del mantenimiento de
+        nuestro sitio web y del posicionamiento que se está realizando ante
+        nuestro público.</Fragment
+      >
+      <Fragment slot={'author'}>Loreto pineda Newman</Fragment>
+      <Fragment slot={'role'}>Socia Fundadora</Fragment>
+    </TestimonyCard>
+
+    <TestimonyCard>
+      <Fragment slot={'body'}
+        >Cebra hace un seguimiento constante a nuestros pedidos, entregando
+        informes completos y accediendo responsablemente a nuestros
+        requerimientos. Con ellos, nos sentimos seguros Con ellos, nos sentimos
+        seguros del mantenimiento de nuestro sitio web y del posicionamiento que
+        se está realizando ante nuestro público.</Fragment
+      >
+      <Fragment slot={'author'}>Loreto pineda Newman</Fragment>
+      <Fragment slot={'role'}>Socia Fundadora</Fragment>
+    </TestimonyCard>
+
+    <TestimonyCard>
+      <Fragment slot={'body'}
+        >Cebra hace un seguimiento constante a nuestros pedidos, entregando
+        informes completos y accediendo responsablemente a nuestros
+        requerimientos. Con ellos, nos sentimos seguros del mantenimiento de
+        nuestro sitio web y del posicionamiento que se está realizando ante
+        nuestro público.</Fragment
+      >
+      <Fragment slot={'author'}>Loreto pineda Newman</Fragment>
+      <Fragment slot={'role'}>Socia Fundadora</Fragment>
+    </TestimonyCard>
+
+    <TestimonyCard>
+      <Fragment slot={'body'}
+        >Cebra hace un seguimiento constante a nuestros pedidos, entregando
+        informes completos y accediendo responsablemente a nuestros
+        requerimientos. Con ellos, nos sentimos seguros del mantenimiento de
+        nuestro sitio web y del posicionamiento que se está realizando ante
+        nuestro público.</Fragment
+      >
+      <Fragment slot={'author'}>Loreto pineda Newman</Fragment>
+      <Fragment slot={'role'}>Socia Fundadora</Fragment>
+    </TestimonyCard>
+  </Fragment>
+</Modules.Testimonies>

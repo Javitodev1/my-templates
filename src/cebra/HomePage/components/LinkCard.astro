@@ -1,4 +1,6 @@
 ---
+import { BrandText } from '.'
+
 interface Props {
   src: string
   alt?: string
@@ -20,17 +22,18 @@ const { src, alt = 'card image alt' } = Astro.props
       />
     </picture>
 
-    <div class='relative mb-0 duration-500 header-container group-hover:mb-2'>
-      <h3 class='text-3xl font-extrabold text-white'>
+    <div
+      class='relative mb-0 break-words duration-500 header-container group-hover:mb-2'>
+      <BrandText variant={'header-card'} color={'white'}>
         <slot name='header'>No slot header</slot>
-      </h3>
+      </BrandText>
     </div>
 
     <div
       class='relative duration-500 translate-y-full opacity-0 body-container group-hover:translate-y-0 group-hover:opacity-100'>
-      <p class='text-lg font-semibold text-white'>
+      <BrandText variant={'body-accent'} color={'white'}>
         <slot name='body'>No slot body</slot>
-      </p>
+      </BrandText>
     </div>
   </article>
 </a>

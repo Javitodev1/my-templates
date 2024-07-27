@@ -12,73 +12,17 @@ import {
   <BrandText
     variant={'spaced'}
     color={'black'}
-    >TESTIMONIOS</BrandText
+    ><slot name="before-header" /></BrandText
   >
 
   <BrandText
     variant={'title'}
     color={'black'}
     class='mt-8'
-    >CLIENTES QUE <Accent
-      variant={'underline'}
-      color={'sky'}
-      >CONFÍAN</Accent
-    >
-    <br />
-    EN <Accent
-      variant={'underline'}
-      color={'yellow'}
-      >AGENCIA CEBRA</Accent
-    >
+    ><slot name="header" />
   </BrandText>
 
   <TestimonyGrid>
-    <TestimonyCard>
-      <Fragment slot={'body'}
-        >Cebra hace un seguimiento constante a nuestros pedidos, entregando
-        informes completos y accediendo responsablemente a nuestros
-        requerimientos. Con ellos, nos sentimos seguros del mantenimiento de
-        nuestro sitio web y del posicionamiento que se está realizando ante
-        nuestro público.</Fragment
-      >
-      <Fragment slot={'author'}>Loreto pineda Newman</Fragment>
-      <Fragment slot={'role'}>Socia Fundadora</Fragment>
-    </TestimonyCard>
-
-    <TestimonyCard>
-      <Fragment slot={'body'}
-        >Cebra hace un seguimiento constante a nuestros pedidos, entregando
-        informes completos y accediendo responsablemente a nuestros
-        requerimientos. Con ellos, nos sentimos seguros  Con ellos, nos sentimos seguros del mantenimiento de
-        nuestro sitio web y del posicionamiento que se está realizando ante
-        nuestro público.</Fragment
-      >
-      <Fragment slot={'author'}>Loreto pineda Newman</Fragment>
-      <Fragment slot={'role'}>Socia Fundadora</Fragment>
-    </TestimonyCard>
-
-    <TestimonyCard>
-      <Fragment slot={'body'}
-        >Cebra hace un seguimiento constante a nuestros pedidos, entregando
-        informes completos y accediendo responsablemente a nuestros
-        requerimientos. Con ellos, nos sentimos seguros del mantenimiento de
-        nuestro sitio web y del posicionamiento que se está realizando ante
-        nuestro público.</Fragment
-      >
-      <Fragment slot={'author'}>Loreto pineda Newman</Fragment>
-      <Fragment slot={'role'}>Socia Fundadora</Fragment>
-    </TestimonyCard>
-
-    <TestimonyCard>
-      <Fragment slot={'body'}
-        >Cebra hace un seguimiento constante a nuestros pedidos, entregando
-        informes completos y accediendo responsablemente a nuestros
-        requerimientos. Con ellos, nos sentimos seguros del mantenimiento de
-        nuestro sitio web y del posicionamiento que se está realizando ante
-        nuestro público.</Fragment
-      >
-      <Fragment slot={'author'}>Loreto pineda Newman</Fragment>
-      <Fragment slot={'role'}>Socia Fundadora</Fragment>
-    </TestimonyCard>
+    <slot name="cards" />
   </TestimonyGrid>
 </Container>

@@ -7,35 +7,25 @@ import { LinkCard, BrandText, Accent } from '../components'
     <BrandText
       variant={'spaced'}
       color={'sky'}
-      >TE AYUDAMOS A CRECER</BrandText
+      ><slot name='before-header' /></BrandText
     >
 
     <BrandText
       variant={'title'}
       color={'black'}
-      >¿QUÉ <Accent
-        variant={'underline'}
-        color={'yellow'}
-        >SOLUCIONES</Accent
-      >OFRECEMOS?</BrandText
+      ><slot name='header' /></BrandText
     >
 
-    <div class='mt-8'>
-      <BrandText
-        variant={'body-accent'}
-        color={'black'}
-        >¡Somos los mejores y queremos que tú también lo seas!</BrandText
-      >
-      <BrandText
-        variant={'body'}
-        color={'black'}
-        >La manada Cebra se enfoca en entregar soluciones personalizadas y
-        resultados de calidad.</BrandText
-      >
-    </div>
+    <BrandText
+      variant={'body'}
+      color={'black'}
+      class='mt-8'
+      ><slot name='after-header' /></BrandText
+    >
   </div>
 
-  <div class='grid grid-cols-1 pt-10 pb-32 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16'>
-    <slot name="cards" />
+  <div
+    class='grid grid-cols-1 pt-10 pb-32 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16'>
+    <slot name='cards' />
   </div>
 </section>

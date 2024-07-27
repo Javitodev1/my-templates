@@ -4,46 +4,9 @@ import { BrandText, LinkButton, Container, MethodCard } from '../components'
 
 <Container class='pb-8 pt-14'>
   <div class='grid grid-cols-4 gap-x-20'>
-    <MethodCard>
-      <Fragment slot={'number'}>01.</Fragment>
-      <Fragment slot={'header'}>¿CÓMO SE ENCUENTRA TU MARCA?</Fragment>
-      <Fragment slot={'body'}
-        >Analizamos el estatus actual de tu negocio y la forma de pensar de tu
-        mercado. Estudiamos el contexto de tu marca para encontrar oportunidades
-        y definir tus necesidades.</Fragment
-      >
-    </MethodCard>
-
-    <MethodCard>
-      <Fragment slot={'number'}>02.</Fragment>
-      <Fragment slot={'header'}>¿QUÉ OBJETIVOS BUSCAS?</Fragment>
-      <Fragment slot={'body'}
-        >Definimos las metas de tu negocio en su entorno digital y desarrollamos
-        tácticas en distintos canales para apoyar estos objetivos.
-      </Fragment>
-    </MethodCard>
-
-    <MethodCard>
-      <Fragment slot={'number'}>03.</Fragment>
-      <Fragment slot={'header'}>¿QUÉ OPORTUNIDADES EXISTEN?</Fragment>
-      <Fragment slot={'body'}
-        >Detectamos los puntos claves de tu negocio para brindarte soluciones
-        personalizadas. Desarrollamos operaciones efectivas para generar una
-        audiencia de calidad.
-      </Fragment>
-    </MethodCard>
-
-    <MethodCard>
-      <Fragment slot={'number'}>04.</Fragment>
-      <Fragment slot={'header'}>¿CÓMO TE AYUDAMOS A MEJORAR? </Fragment>
-      <Fragment slot={'body'}
-        >Las conversiones y resultados están siempre acompañadas de un análisis
-        constante. Te entregamos informes detallados para implementar mejoras
-        continuas.</Fragment
-      >
-    </MethodCard>
+    <slot name='cards' />
   </div>
   <div class='flex justify-center mt-10'>
-    <LinkButton variant={'black'}>conócenos</LinkButton>
+    <LinkButton variant={'black'}><slot name='cta' /></LinkButton>
   </div>
 </Container>

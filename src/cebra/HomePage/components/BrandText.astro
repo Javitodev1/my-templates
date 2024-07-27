@@ -9,6 +9,7 @@ enum VariantKeys {
   cta,
   body,
   'body-accent',
+  'header-card',
   'body-card',
   'big-number',
 }
@@ -35,7 +36,7 @@ const Variants: Record<Variant, VariantObj> = {
   },
   'spaced': {
     as: 'p',
-    css: 'text-xs font-normal tracking-[0.17rem] leading-loose uppercase',
+    css: 'text-xs font-semibold tracking-[0.17rem] leading-loose uppercase',
   },
   'cta': {
     as: 'p',
@@ -43,15 +44,19 @@ const Variants: Record<Variant, VariantObj> = {
   },
   'body': {
     as: 'p',
-    css: 'text-lg font-light leading-loose',
+    css: 'text-lg leading-loose',
   },
   'body-accent': {
     as: 'p',
     css: 'text-lg font-semibold',
   },
+  'header-card': {
+    as: 'h3',
+    css: 'text-3xl font-extrabold',
+  },
   'body-card': {
     as: 'p',
-    css: 'text-base leading-relaxed'
+    css: 'text-base leading-relaxed',
   },
   'big-number': {
     as: 'p',
@@ -60,23 +65,23 @@ const Variants: Record<Variant, VariantObj> = {
 }
 
 const Colors = {
-  none: '',
-  white: 'text-white',
-  black: 'text-black',
+  'none': '',
+  'white': 'text-white',
+  'black': 'text-black',
   'black-secondary': 'text-neutral-600',
-  yellow: 'text-cebra-accent-1',
-  sky: 'text-cebra-accent-2',
+  'yellow': 'text-cebra-accent-1',
+  'sky': 'text-cebra-accent-2',
 }
 
 type Color = keyof typeof Colors
 
 interface Props {
   variant: Variant
-  color: Color
+  color?: Color
   class?: string
 }
 
-const { variant, color, class: className, ...props } = Astro.props
+const { variant, color = 'none', class: className, ...props } = Astro.props
 const { as: Tag, css } = Variants[variant]
 
 const classes = [className, css, Colors[color]]

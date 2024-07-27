@@ -9,15 +9,12 @@ import { BrandText, LinkButton, Accent } from '../components'
         <BrandText
           variant={'title'}
           color={'black'}
-          >NOS ESFORZAMOS EN DARLE UN <Accent
-            variant={'underline'}
-            color={'sky'}
-            >TOQUE ÚNICO</Accent
-          > A CADA UNO DE NUESTROS SOCIOS</BrandText
-        >
+          ><slot name='header' />
+        </BrandText>
       </div>
+      
       <div class='col-span-2'>
-        <LinkButton variant={'black'}>contáctanos</LinkButton>
+        <LinkButton variant={'black'}><slot name='cta' /></LinkButton>
       </div>
     </div>
   </div>
