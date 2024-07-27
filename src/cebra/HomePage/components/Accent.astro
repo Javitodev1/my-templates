@@ -24,10 +24,8 @@ const { text, bg } = Colors[color]
 const classes = [variant === 'solid' ? text : bg, Variants[variant]]
 ---
 
-<strong class:list={classes}>
-  <slot />
-</strong>
-
+<strong class:list={classes}><slot /></strong>
+i78967
 <style>
   strong {
     background-size: 100px 1.2em;

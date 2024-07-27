@@ -1,5 +1,5 @@
 ---
-import { BrandText, Accent, LinkButton } from '@cebra/components'
+import { BrandText, Accent, LinkButton } from '../components'
 ---
 
 <section class='relative w-full bg-center bg-no-repeat bg-cover'>
@@ -21,8 +21,9 @@ import { BrandText, Accent, LinkButton } from '@cebra/components'
   </header>
 
   <!-- Hero -->
-  <div class='grid max-w-screen-xl grid-cols-3 gap-4 px-10 mx-auto py-60'>
-    <div class='col-span-2'>
+  <div
+    class='grid max-w-screen-xl grid-cols-1 gap-4 px-10 mx-auto md:grid-cols-3 py-60'>
+    <div class='md:col-span-2'>
       <BrandText
         variant={'spaced'}
         color={'white'}
@@ -33,20 +34,14 @@ import { BrandText, Accent, LinkButton } from '@cebra/components'
       <BrandText
         variant={'banner'}
         color={'white'}
-        >MÁS QUE UNA
-        <Accent
-          variant={'solid'}
-          color={'yellow'}
-          >AGENCIA DE MARKETING DIGITAL</Accent
-        >, SOMOS TU
-        <Accent
-          variant={'underline'}
-          color={'sky'}
-          >SOCIO ESTRATÉGICO</Accent
-        >
+        >MÁS QUE UNA <Accent variant={'solid'} color={'yellow'}>AGENCIA DE MARKETING DIGITAL</Accent>, SOMOS TU<Accent variant={'underline'} color={'sky'}> SOCIO ESTRATÉGICO</Accent>
       </BrandText>
 
-      <LinkButton variant={'yellow'} class='mt-10'>CONÓCENOS</LinkButton>
+      <LinkButton
+        variant={'yellow'}
+        class='mt-10'
+        >CONÓCENOS</LinkButton
+      >
     </div>
   </div>
 </section>
